@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "9f14350d-1b9f-469a-a40e-351188784b57",
+		"name": "CustomerAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "449193"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/api/customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Vinod\",\n     \"lastName\": \"Dwivedi\",\n     \"email\": \"vinod.dwivedi@sample.com\",\n     \"addresses\":[{\n         \"address\":\"9-D, Satna\"\n     },\n     {\n         \"address\":\"476-C, Ghaziabad\"\n     }]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customer"
+					]
+				},
+				"description": "CustomerAPI"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/customer/3",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"addresses\": [ {\n        \"id\": \"1\",\n        \"address\":\"44-B, BLR, KT\"\n}\n]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/customer/42",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customer",
+						"42"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
